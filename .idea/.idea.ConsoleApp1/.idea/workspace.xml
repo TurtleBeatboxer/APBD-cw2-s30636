@@ -8,20 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68cdffb4-d3c4-411a-8ee6-0135530b000b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/DTO/UserDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/Entity/Device/Camera.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/Entity/Device/Device.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/Entity/Device/Laptop.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/Entity/Device/Projector.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/Entity/Rent/Rental.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/Entity/User/Employee.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/Entity/User/Student.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/Entity/User/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/IMyInterface.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/Service/DeviceService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/Service/RentalService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/Service/UserService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConsoleApp1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConsoleApp1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Entity/User/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Entity/User/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Service/DeviceService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Service/DeviceService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Service/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Service/UserService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +22,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/ConsoleApp1/DTO/UserDTO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApp1/Entity/Device/Camera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApp1/Entity/Device/Device.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApp1/Entity/Device/Laptop.cs" root0="FORCE_HIGHLIGHTING" />
@@ -101,7 +90,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1773586454026</updated>
-      <workItem from="1773586455345" duration="3503000" />
+      <workItem from="1773586455345" duration="4206000" />
     </task>
     <servers />
   </component>

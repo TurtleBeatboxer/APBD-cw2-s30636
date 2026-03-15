@@ -13,11 +13,12 @@ public abstract class User
         Id = ++_idCount;
     }
 
-    protected User(string username, string name, string lastname, int id)
+    public User(string username, string name, string lastname, int id)
     {
         Username = username;
         Name = name;
         Lastname = lastname;
         Id = id;
     }
+    
 }

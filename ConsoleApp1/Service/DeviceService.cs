@@ -1,5 +1,4 @@
 using ConsoleApp1.DTOs.Device;
-using ConsoleApp1.Interfaces.Services;
 using ConsoleApp1.Repositories;
 
 namespace ConsoleApp1.Service;

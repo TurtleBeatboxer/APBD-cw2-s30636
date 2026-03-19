@@ -8,10 +8,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68cdffb4-d3c4-411a-8ee6-0135530b000b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ConsoleApp1/DTOs/Device/CameraDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApp1/DTOs/Device/DeviceDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApp1/DTOs/Device/LaptopDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApp1/DTOs/Device/ProjectorDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApp1/DTOs/Rent/RentalDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApp1/DTOs/User/EmployeeDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApp1/DTOs/User/StudentDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApp1/DTOs/User/UserDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApp1/Interfaces/Repositories/IDeviceRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApp1/Interfaces/Services/IDeviceService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApp1/Repositories/DeviceRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApp1/Repositories/UserRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConsoleApp1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConsoleApp1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Entity/User/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Entity/User/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Entity/Device/Camera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Entities/Device/Camera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Entity/Device/Device.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Entities/Device/Device.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Entity/Device/Laptop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Entities/Device/Laptop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Entity/Device/Projector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Entities/Device/Projector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Entity/Rent/Rental.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Entities/Rent/Rental.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Entity/User/Employee.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Entities/User/Employee.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Entity/User/Student.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Entities/User/Student.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Entity/User/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Entities/User/User.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApp1/Service/DeviceService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Service/DeviceService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Service/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Service/UserService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,23 +40,38 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "TurtleBeatboxer"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/TurtleBeatboxer/apbd2.git",
+    "accountId": "4f3d4d73-e098-46dc-b504-dd2689d062c9"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/ConsoleApp1/Entity/Device/Camera.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ConsoleApp1/Entity/Device/Device.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ConsoleApp1/Entity/Device/Laptop.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ConsoleApp1/Entity/Device/Projector.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ConsoleApp1/Entity/Rent/Rental.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ConsoleApp1/Entity/User/Employee.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ConsoleApp1/Entity/User/Student.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ConsoleApp1/Entity/User/User.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp1/DTOs/Device/CameraDTO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp1/DTOs/Device/DeviceDTO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp1/DTOs/Device/LaptopDTO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp1/DTOs/Device/ProjectorDTO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp1/DTOs/Rent/RentalDTO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp1/DTOs/User/EmployeeDTO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp1/DTOs/User/StudentDTO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp1/DTOs/User/UserDTO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApp1/IMyInterface.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp1/Interfaces/Services/IDeviceService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp1/Repositories/DeviceRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp1/Repositories/UserRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApp1/Service/DeviceService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApp1/Service/RentalService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApp1/Service/UserService.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="3AzDM3OTggfYGNGrIryv7KGzvzY" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -49,6 +83,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -64,10 +99,8 @@
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
-      <option name="PTY_MODE" value="Auto" />
       <option name="MIXED_MODE_DEBUG" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
@@ -91,6 +124,7 @@
       <option name="presentableId" value="Default" />
       <updated>1773586454026</updated>
       <workItem from="1773586455345" duration="4206000" />
+      <workItem from="1773926098466" duration="4766000" />
     </task>
     <servers />
   </component>

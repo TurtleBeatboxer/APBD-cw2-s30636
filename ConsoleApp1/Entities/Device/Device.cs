@@ -3,7 +3,7 @@ namespace ConsoleApp1;
 public abstract class Device
 {
     private static int _idCount; 
-    private int Id { get; }
+    public int Id { get; private set; }
     
     private string Name { get; set; }
     private string AvailabilityStatus { get; set; }
@@ -11,8 +11,11 @@ public abstract class Device
     private DateTimeOffset RentalDate { get; set; }
     private string Serial {get; set;}
     
-    public Device()
+    protected Device(string name, string serial, string rentalPrice)
     {
         Id = ++_idCount;
+        Name = name;
+        Serial = serial;
+        RentalPrice = rentalPrice;
     }
 }

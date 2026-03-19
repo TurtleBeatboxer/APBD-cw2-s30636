@@ -7,4 +7,13 @@ public class Rental
     private DateTimeOffset DateOfRental {get; set;}
     private DateTimeOffset DateOfReturn {get; set;}
     private bool IsReturnOnTime {get; set;}
+    
+    public Rental(User user, Device device, DateTimeOffset dateOfRental, DateTimeOffset dateOfReturn)
+    {
+        User = user;
+        Device = device;
+        DateOfRental = dateOfRental;
+        DateOfReturn = dateOfReturn;
+        IsReturnOnTime = false; 
+    }
 }

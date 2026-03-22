@@ -4,5 +4,5 @@ public enum DeviceStatus
 {
     Available,
     Rented,
-    Unavailable 
+    Unavailable
 }

@@ -21,6 +21,6 @@ public class UserRepository
 
     public IEnumerable<User> GetAll()
     {
-        return _dbSet;
+        return _dbSet.AsReadOnly();
     }
 }

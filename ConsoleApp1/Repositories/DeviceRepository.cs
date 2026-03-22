@@ -25,6 +25,6 @@ public class DeviceRepository
 
     public IEnumerable<Device> GetAll()
     {
-        return _dbSet;
+        return _dbSet.AsReadOnly();
     }
 }

@@ -3,8 +3,8 @@ namespace ConsoleApp1;
 public abstract class User
 {
     private string Username {get; set;}
-    private string Name {get; set;}
-    private string Lastname {get; set;}
+    public string Name {get; protected set;}
+    public string Lastname {get; protected set;}
     private static int _idCount; 
     public  int Id { get; private set; }
     

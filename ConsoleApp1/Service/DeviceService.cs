@@ -1,4 +1,5 @@
 using ConsoleApp1.DTOs.Device;
+using ConsoleApp1.Entities.Enum;
 using ConsoleApp1.Repositories;
 
 namespace ConsoleApp1.Service;
@@ -16,8 +17,7 @@ public class DeviceService
     {
         if (string.IsNullOrWhiteSpace(dto.Name))
             throw new ArgumentException("Device name cannot be null or empty.");
-
-        // 1. Map the DTO to the Entity
+        
         Device newDevice = dto switch
         {
             CreateLaptopDTO laptopDto => new Laptop(
@@ -38,5 +38,37 @@ public class DeviceService
         _repository.Add(newDevice);
 
         return newDevice.Id;
+    }
+
+    public void PrintAllDevices()
+    {
+        foreach (var device in _repository.GetAll())
+        {
+            Console.WriteLine($"Device: {device.Name} with ID:{device.Id} is {device.Status}");
+        }
+    }
+    
+    public void PrintAllDevices(DeviceStatus status)
+    {
+        foreach (var device in _repository
+                     .GetAll()
+                     .Where(d => d.Status == DeviceStatus.Available)) {
+            Console.WriteLine($"Device: {device.Name} with ID:{device.Id} is {device.Status}");
+        }
+    }
+
+    public void MarkAsUnavailableById(int id)
+    {
+        var device = _repository.GetById(id);
+        switch (device.Status)
+        {
+            case DeviceStatus.Available:
+                device.MarkAsUnavailable();
+                break;
+            case DeviceStatus.Rented:
+                throw new InvalidOperationException($"Device {device.Name} is currently rented and cant be made unavailable.");
+            case DeviceStatus.Unavailable:
+                break;
+        }
     }
 }

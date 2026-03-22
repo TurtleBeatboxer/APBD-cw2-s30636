@@ -1,54 +1,118 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using ConsoleApp1.DTOs.Device;
+using ConsoleApp1.DTOs.Rent;
 using ConsoleApp1.DTOs.User;
+using ConsoleApp1.Entities.Enum;
 using ConsoleApp1.Repositories;
 using ConsoleApp1.Service;
 using ConsoleApp1.Services;
 
-var deviceRepository = new DeviceRepository();
-var deviceService = new DeviceService(deviceRepository);
+namespace ConsoleApp1;
 
-var userRepository = new UserRepository();
-var userService = new UserService(userRepository);
-
-var rentalRepository = new RentalRepository();
-var rentalService = new RentalService(rentalRepository, userRepository, deviceRepository);
-
-var newStudentDTO = new CreateStudentDTO
+public class Program
 {
-    Username = "TurtleBeaatboxer",
-    Name  = "Michal",
-    Lastname  = "Marzecki",
-};
+    public static void Main(string[] args)
+    {
+        var deviceRepository = new DeviceRepository();
+        var deviceService = new DeviceService(deviceRepository);
+
+        var userRepository = new UserRepository();
+        var userService = new UserService(userRepository);
+
+        var rentalRepository = new RentalRepository();
+        var rentalService = new RentalService(rentalRepository, userRepository, deviceRepository);
 
 
-try 
-{
-    userService.CreateUser(newStudentDTO);
-}
-catch (Exception ex)
-{
-    Console.WriteLine($"Error: {ex.Message}");
-}
+        var newStudentDto = new CreateStudentDTO
+        {
+            Username = "TurtleBeaatboxer",
+            Name  = "Michal",
+            Lastname  = "Marzecki",
+        };
+        var newEmployeeDto = new CreateEmployeeDTO
+        {
+            Username = "ProfKowalski",
+            Name = "Jan",
+            Lastname = "Kowalski"
+        };
+
+        int studentId = 0;
+        int employeeId = 0;
+        try 
+        {
+            // 1. First functionality
+           studentId = userService.CreateUser(newStudentDto);
+           employeeId = userService.CreateUser(newEmployeeDto);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
 
 
+        int laptop1Id = 0;
+        int laptop2Id = 0;
+        int cameraId = 0; 
+        var newLaptopDto = new CreateLaptopDTO { Name = "ThinkPad T14", Serial = "TP-12345", RentalPrice = 50.00, 
+            GPUModel = "Integrated Intel", Model = "T14 Gen 3", CPUModel = "Intel i7" };
+        var newLaptopNextDto = new CreateLaptopDTO { Name = "ThinkPad T15", Serial = "TP-23456", RentalPrice = 51.00, 
+            GPUModel = "Integrated Intel", Model = "T15 Gen 4", CPUModel = "Intel i7" };
+        var newCameraDto = new CreateCameraDTO { Name = "Sony A7 III", Serial = "SNY-999", RentalPrice = 120.00, 
+            LenseBrand = "Sony", MaxZoomLevel = 2 };
 
-var newLaptopDto = new CreateLaptopDTO
-{
-    Name = "ThinkPad T14",
-    Serial = "TP-12345",
-    RentalPrice = 50.00,
-    GPUModel = "Integrated Intel",
-    Model = "T14 Gen 3",
-    CPUModel = "Intel i7"
-};
+        try 
+        {
+            // 2. Second Functionality
+            laptop1Id = deviceService.CreateDevice(newLaptopDto);
+            laptop2Id = deviceService.CreateDevice(newLaptopNextDto);
+            cameraId = deviceService.CreateDevice(newCameraDto);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+            // 3. Third Functionality
+            deviceService.PrintAllDevices();
+            // 5. Fifth functionality
+            var rent1 = new CreateRentalDTO { UserId = studentId, DeviceId = laptop1Id, DateOfRental = DateTimeOffset.Now,
+                PlannedDateOfReturn = DateTimeOffset.Now.AddDays(7) };
+            int rental1Id = rentalService.RentDevice(rent1);
+            // 4. Fourth Functionality
+            deviceService.PrintAllDevices(DeviceStatus.Available);
+            var rent2 = new CreateRentalDTO { UserId = studentId, DeviceId = laptop2Id, DateOfRental = DateTimeOffset.Now.AddDays(-5),
+                PlannedDateOfReturn = DateTimeOffset.Now.AddDays(-1) };
+            int rental2Id = rentalService.RentDevice(rent2);
 
-try 
-{
-    int newId = deviceService.CreateDevice(newLaptopDto);
-}
-catch (Exception ex)
-{
-    Console.WriteLine($"Error: {ex.Message}");
+            try 
+            {
+                Console.WriteLine("\nAttempting to rent a 3rd device (should fail)...");
+                var rent3 = new CreateRentalDTO { UserId = studentId, DeviceId = cameraId, DateOfRental = DateTimeOffset.Now, 
+                    PlannedDateOfReturn = DateTimeOffset.Now.AddDays(7) };
+                rentalService.RentDevice(rent3);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[EXPECTED FAILURE]: {ex.Message}");
+            }
+            // 6th functionality
+            Console.WriteLine("\n--- Testing Returns ---");
+            decimal fee1 = rentalService.ReturnDevice(rental1Id);
+            Console.WriteLine($"Returned Laptop 1 on time. Penalty fee: {fee1}");
+
+            decimal fee2 = rentalService.ReturnDevice(rental2Id);
+            Console.WriteLine($"Returned Laptop 2 LATE. Penalty fee applied: {fee2}");
+
+            // 7th functionality 
+            deviceService.MarkAsUnavailableById(cameraId);
+
+            // 8th functionality
+            rentalService.PrintActiveRentalsForUserId(studentId);
+
+            // 9th functionality 
+            rentalService.PrintOverdueRentals();
+
+            // 10th functionality
+            rentalService.GenerateSystemReport();
+    }
 }

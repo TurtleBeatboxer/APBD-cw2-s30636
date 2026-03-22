@@ -14,12 +14,18 @@ public class RentalRepository
         if (rental == null) throw new KeyNotFoundException($"Rental {id} not found.");
         return rental;
     }
-
-        
+    public IEnumerable<Rental> GetActiveRentalsForUser(int userId)
+    {
+        return _rentals.Where(r => r.User.Id == userId && r.IsActive);
+    }
     public int GetActiveRentalCountForUser(int userId)
     {
         return _rentals.Count(r => r.User.Id == userId && r.IsActive);
     }
+    public IEnumerable<Rental> GetOverdueRentals(DateTimeOffset currentDate)
+    {
+        return _rentals.Where(r => r.IsActive && r.PlannedReturnDate < currentDate);
+    }
 
-    public IEnumerable<Rental> GetAll() => _rentals;
+    public IEnumerable<Rental> GetAll() => _rentals.AsReadOnly();
 }

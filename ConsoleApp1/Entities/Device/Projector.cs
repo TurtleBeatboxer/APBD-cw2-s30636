@@ -5,7 +5,7 @@ public class Projector : Device
    private string LightLumen {get; set;}
    private bool IsWiFi {get; set;}
    
-   public Projector(string name, string serial, string rentalPrice, string lightLumen, bool isWiFi) 
+   public Projector(string name, string serial, Double rentalPrice, string lightLumen, bool isWiFi) 
       : base(name, serial, rentalPrice)
    {
       LightLumen = lightLumen;

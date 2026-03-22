@@ -6,7 +6,7 @@ public class Laptop : Device
     private string Model {get; set;}
     private string CPUModel { get;  set; }
     
-    public Laptop(string name, string serial, string rentalPrice, string gpuModel, string model, string cpuModel) 
+    public Laptop(string name, string serial, Double rentalPrice, string gpuModel, string model, string cpuModel) 
         : base(name, serial, rentalPrice)
     {
         GPUModel = gpuModel;

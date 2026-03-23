@@ -40,21 +40,14 @@ public class DeviceService
         return newDevice.Id;
     }
 
-    public void PrintAllDevices()
+    public IEnumerable<Device> GetAllDevices()
     {
-        foreach (var device in _repository.GetAll())
-        {
-            Console.WriteLine($"Device: {device.Name} with ID:{device.Id} is {device.Status}");
-        }
+        return _repository.GetAll();
     }
     
-    public void PrintAllDevices(DeviceStatus status)
+    public IEnumerable<Device> GetAllDevices(DeviceStatus status)
     {
-        foreach (var device in _repository
-                     .GetAll()
-                     .Where(d => d.Status == DeviceStatus.Available)) {
-            Console.WriteLine($"Device: {device.Name} with ID:{device.Id} is {device.Status}");
-        }
+        return _repository.GetAll().Where(d => d.Status == status);
     }
 
     public void MarkAsUnavailableById(int id)

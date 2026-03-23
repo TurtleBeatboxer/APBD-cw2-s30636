@@ -72,47 +72,74 @@ public class Program
         {
             Console.WriteLine($"Error: {ex.Message}");
         }
-            // 3. Third Functionality
-            deviceService.PrintAllDevices();
-            // 5. Fifth functionality
-            var rent1 = new CreateRentalDTO { UserId = studentId, DeviceId = laptop1Id, DateOfRental = DateTimeOffset.Now,
+        
+        // 3. Third Functionality
+        foreach (var device in deviceService.GetAllDevices())
+        {
+            Console.WriteLine($"Device: {device.Name} with ID:{device.Id} is {device.Status}");
+        }
+
+        // 5. Fifth functionality
+        var rent1 = new CreateRentalDTO { UserId = studentId, DeviceId = laptop1Id, DateOfRental = DateTimeOffset.Now,
+            PlannedDateOfReturn = DateTimeOffset.Now.AddDays(7) };
+        int rental1Id = rentalService.RentDevice(rent1);
+        
+        // 4. Fourth Functionality
+        foreach (var device in deviceService.GetAllDevices(DeviceStatus.Available))
+        {
+            Console.WriteLine($"Device: {device.Name} with ID:{device.Id} is {device.Status}");
+        }
+        
+        var rent2 = new CreateRentalDTO { UserId = studentId, DeviceId = laptop2Id, DateOfRental = DateTimeOffset.Now.AddDays(-5),
+            PlannedDateOfReturn = DateTimeOffset.Now.AddDays(-1) };
+        int rental2Id = rentalService.RentDevice(rent2);
+
+        try 
+        {
+            Console.WriteLine("\nAttempting to rent a 3rd device (should fail)...");
+            var rent3 = new CreateRentalDTO { UserId = studentId, DeviceId = cameraId, DateOfRental = DateTimeOffset.Now, 
                 PlannedDateOfReturn = DateTimeOffset.Now.AddDays(7) };
-            int rental1Id = rentalService.RentDevice(rent1);
-            // 4. Fourth Functionality
-            deviceService.PrintAllDevices(DeviceStatus.Available);
-            var rent2 = new CreateRentalDTO { UserId = studentId, DeviceId = laptop2Id, DateOfRental = DateTimeOffset.Now.AddDays(-5),
-                PlannedDateOfReturn = DateTimeOffset.Now.AddDays(-1) };
-            int rental2Id = rentalService.RentDevice(rent2);
+            rentalService.RentDevice(rent3);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[EXPECTED FAILURE]: {ex.Message}");
+        }
+        
+        // 6th functionality
+        decimal fee1 = rentalService.ReturnDevice(rental1Id);
+        Console.WriteLine($"Returned Laptop 1 on time. Penalty fee: {fee1}");
 
-            try 
-            {
-                Console.WriteLine("\nAttempting to rent a 3rd device (should fail)...");
-                var rent3 = new CreateRentalDTO { UserId = studentId, DeviceId = cameraId, DateOfRental = DateTimeOffset.Now, 
-                    PlannedDateOfReturn = DateTimeOffset.Now.AddDays(7) };
-                rentalService.RentDevice(rent3);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"[EXPECTED FAILURE]: {ex.Message}");
-            }
-            // 6th functionality
-            Console.WriteLine("\n--- Testing Returns ---");
-            decimal fee1 = rentalService.ReturnDevice(rental1Id);
-            Console.WriteLine($"Returned Laptop 1 on time. Penalty fee: {fee1}");
+        decimal fee2 = rentalService.ReturnDevice(rental2Id);
+        Console.WriteLine($"Returned Laptop 2 late. Penalty fee applied: {fee2}");
 
-            decimal fee2 = rentalService.ReturnDevice(rental2Id);
-            Console.WriteLine($"Returned Laptop 2 LATE. Penalty fee applied: {fee2}");
+        // 7th functionality 
+        deviceService.MarkAsUnavailableById(cameraId);
 
-            // 7th functionality 
-            deviceService.MarkAsUnavailableById(cameraId);
+        // 8th functionality
+        var activeRentals = rentalService.GetActiveRentalsForUser(studentId);
+        if (!activeRentals.Any())
+        {
+            Console.WriteLine("This user has no active rentals.");
+        }
+        foreach (var rental in activeRentals)
+        {
+            Console.WriteLine($"Device: {rental.Device.Name} (ID: {rental.Device.Id}) Due back: {rental.PlannedReturnDate:yyyy-MM-dd}");
+        }
 
-            // 8th functionality
-            rentalService.PrintActiveRentalsForUserId(studentId);
+        // 9th functionality 
+        var overdueRentals = rentalService.GetOverdueRentals();
+        if (!overdueRentals.Any())
+        {
+            Console.WriteLine("There are no overdue rentals right now.");
+        }
+        foreach (var rental in overdueRentals)
+        {
+            var lateDays = (DateTimeOffset.Now - rental.PlannedReturnDate).Days;
+            Console.WriteLine($"Device: {rental.Device.Name} (ID: {rental.Device.Id}) Rented by ID: {rental.User.Id} {lateDays} days late");
+        }
 
-            // 9th functionality 
-            rentalService.PrintOverdueRentals();
-
-            // 10th functionality
-            rentalService.GenerateSystemReport();
+        // 10th functionality
+        Console.WriteLine(rentalService.GenerateSystemReport());
     }
 }

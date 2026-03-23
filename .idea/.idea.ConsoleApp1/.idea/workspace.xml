@@ -9,15 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="68cdffb4-d3c4-411a-8ee6-0135530b000b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConsoleApp1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConsoleApp1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/DTOs/Rent/RentalDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/DTOs/Rent/RentalDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Entities/Device/Camera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Entities/Device/Camera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Entities/Device/Laptop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Entities/Device/Laptop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Entities/Enum/DeviceStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Entities/Enum/DeviceStatus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Entities/User/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Entities/User/User.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApp1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Repositories/DeviceRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Repositories/DeviceRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Repositories/RentalRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Repositories/RentalRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Repositories/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Repositories/UserRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApp1/Service/DeviceService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Service/DeviceService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApp1/Service/RentalService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Service/RentalService.cs" afterDir="false" />
     </list>
@@ -114,7 +106,7 @@
       <option name="presentableId" value="Default" />
       <updated>1773586454026</updated>
       <workItem from="1773586455345" duration="4206000" />
-      <workItem from="1773926098466" duration="24373000" />
+      <workItem from="1773926098466" duration="29546000" />
     </task>
     <servers />
   </component>

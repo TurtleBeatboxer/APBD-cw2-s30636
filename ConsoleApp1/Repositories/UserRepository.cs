@@ -14,13 +14,13 @@ public class UserRepository
         var user = _dbSet.FirstOrDefault(u => u.Id == id);
         if (user == null)
         {
-            throw new KeyNotFoundException($"Device with Id {id} was not found.");
+            throw new KeyNotFoundException($"User with Id {id} was not found.");
         }
         return user;
     }
 
     public IEnumerable<User> GetAll()
     {
-        return _dbSet;
+        return _dbSet.AsReadOnly();
     }
 }

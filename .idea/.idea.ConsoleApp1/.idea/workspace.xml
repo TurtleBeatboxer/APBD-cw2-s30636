@@ -8,29 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68cdffb4-d3c4-411a-8ee6-0135530b000b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/DTOs/Device/CameraDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/DTOs/Device/DeviceDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/DTOs/Device/LaptopDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/DTOs/Device/ProjectorDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/DTOs/Rent/RentalDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/DTOs/User/EmployeeDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/DTOs/User/StudentDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/DTOs/User/UserDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/Interfaces/Repositories/IDeviceRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/Interfaces/Services/IDeviceService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/Repositories/DeviceRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/Repositories/UserRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConsoleApp1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConsoleApp1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Entity/Device/Camera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Entities/Device/Camera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Entity/Device/Device.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Entities/Device/Device.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Entity/Device/Laptop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Entities/Device/Laptop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Entity/Device/Projector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Entities/Device/Projector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Entity/Rent/Rental.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Entities/Rent/Rental.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Entity/User/Employee.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Entities/User/Employee.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Entity/User/Student.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Entities/User/Student.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Entity/User/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Entities/User/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApp1/Service/DeviceService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Service/DeviceService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Service/RentalService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Service/RentalService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,9 +42,9 @@
     <setting file="file://$PROJECT_DIR$/ConsoleApp1/DTOs/User/EmployeeDTO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApp1/DTOs/User/StudentDTO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApp1/DTOs/User/UserDTO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ConsoleApp1/IMyInterface.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ConsoleApp1/Interfaces/Services/IDeviceService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp1/Entities/Enum/DeviceStatus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApp1/Repositories/DeviceRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp1/Repositories/RentalRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApp1/Repositories/UserRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApp1/Service/DeviceService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApp1/Service/RentalService.cs" root0="FORCE_HIGHLIGHTING" />
@@ -84,12 +65,13 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "Develop",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -124,7 +106,7 @@
       <option name="presentableId" value="Default" />
       <updated>1773586454026</updated>
       <workItem from="1773586455345" duration="4206000" />
-      <workItem from="1773926098466" duration="4766000" />
+      <workItem from="1773926098466" duration="29546000" />
     </task>
     <servers />
   </component>

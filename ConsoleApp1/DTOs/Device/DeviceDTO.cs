@@ -6,7 +6,7 @@ public abstract class DeviceDTO
     public string Name { get; set; }
     public string AvailabilityStatus { get; set; }
     
-    public string RentalPrice { get; set; } 
+    public Double RentalPrice { get; set; } 
     
     public DateTimeOffset RentalDate { get; set; }
     public string Serial { get; set; }
@@ -15,6 +15,6 @@ public abstract class DeviceDTO
 public abstract class CreateDeviceDTO
 {
     public string Name { get; set; }
-    public string RentalPrice { get; set; }
+    public Double RentalPrice { get; set; }
     public string Serial { get; set; }
 }

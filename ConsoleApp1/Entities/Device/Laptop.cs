@@ -2,11 +2,11 @@ namespace ConsoleApp1;
 
 public class Laptop : Device
 {
-    private string GPUModel {get; set;}
-    private string Model {get; set;}
-    private string CPUModel { get;  set; }
+    public string GPUModel {get; private set;}
+    public string Model {get; private set;}
+    public string CPUModel { get; private set; }
     
-    public Laptop(string name, string serial, string rentalPrice, string gpuModel, string model, string cpuModel) 
+    public Laptop(string name, string serial, Double rentalPrice, string gpuModel, string model, string cpuModel) 
         : base(name, serial, rentalPrice)
     {
         GPUModel = gpuModel;

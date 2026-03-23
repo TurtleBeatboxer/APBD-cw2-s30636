@@ -1,11 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using ConsoleApp1;
-using ConsoleApp1.Interfaces.Repositories;
 
 namespace ConsoleApp1.Repositories;
 
-public class DeviceRepository : IDeviceRepository
+public class DeviceRepository
 {
     private readonly List<Device> _dbSet = new();
 
@@ -26,6 +25,6 @@ public class DeviceRepository : IDeviceRepository
 
     public IEnumerable<Device> GetAll()
     {
-        return _dbSet;
+        return _dbSet.AsReadOnly();
     }
 }

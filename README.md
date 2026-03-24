@@ -11,3 +11,11 @@ Zastosowany podział klas i katalogów:
 * **Repositories (Repozytoria)**: Klasy `DeviceRepository`, `RentalRepository`, `UserRepository` odpowiadają wyłącznie za przechowywanie danych (w tym przypadku w pamięci przy użyciu kolekcji) oraz dostęp do nich.
 * **Services (Serwisy)**: Klasy `DeviceService`, `RentalService`, `UserService` centralizują logikę biznesową. To tutaj sprawdzane są limity wypożyczeń, naliczane kary za opóźnienia i generowane raporty. Dzięki temu `Program.cs` nie zawiera logiki, a jedynie wywołuje odpowiednie metody.
 * **DTOs**: Służą do bezpiecznego przekazywania danych wejściowych z poziomu UI (konsoli) do serwisów, oddzielając wejście użytkownika od wewnętrznego modelu bazy danych.
+
+## Instrukcja Uruchomienia
+1. Upewnij się, że masz zainstalowane środowisko .NET SDK.
+2. Sklonuj lub pobierz repozytorium z kodem.
+3. Otwórz terminal/wiersz poleceń w głównym folderze projektu (tam, gdzie znajduje się plik `.csproj`).
+4. Uruchom aplikację komendą:
+   ```bash
+   dotnet run

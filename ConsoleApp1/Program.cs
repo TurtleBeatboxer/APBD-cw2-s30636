@@ -105,18 +105,8 @@ public class Program
         {
             Console.WriteLine($"[EXPECTED FAILURE]: {ex.Message}");
         }
-        
-        // 6th functionality
-        decimal fee1 = rentalService.ReturnDevice(rental1Id);
-        Console.WriteLine($"Returned Laptop 1 on time. Penalty fee: {fee1}");
 
-        decimal fee2 = rentalService.ReturnDevice(rental2Id);
-        Console.WriteLine($"Returned Laptop 2 late. Penalty fee applied: {fee2}");
-
-        // 7th functionality 
-        deviceService.MarkAsUnavailableById(cameraId);
-
-        // 8th functionality
+        // 8th functionality (MOVED UP)
         var activeRentals = rentalService.GetActiveRentalsForUser(studentId);
         if (!activeRentals.Any())
         {
@@ -127,7 +117,7 @@ public class Program
             Console.WriteLine($"Device: {rental.Device.Name} (ID: {rental.Device.Id}) Due back: {rental.PlannedReturnDate:yyyy-MM-dd}");
         }
 
-        // 9th functionality 
+        // 9th functionality (MOVED UP)
         var overdueRentals = rentalService.GetOverdueRentals();
         if (!overdueRentals.Any())
         {
@@ -138,6 +128,16 @@ public class Program
             var lateDays = (DateTimeOffset.Now - rental.PlannedReturnDate).Days;
             Console.WriteLine($"Device: {rental.Device.Name} (ID: {rental.Device.Id}) Rented by ID: {rental.User.Id} {lateDays} days late");
         }
+        
+        // 6th functionality
+        decimal fee1 = rentalService.ReturnDevice(rental1Id);
+        Console.WriteLine($"Returned Laptop 1 on time. Penalty fee: {fee1}");
+
+        decimal fee2 = rentalService.ReturnDevice(rental2Id);
+        Console.WriteLine($"Returned Laptop 2 late. Penalty fee applied: {fee2}");
+
+        // 7th functionality 
+        deviceService.MarkAsUnavailableById(cameraId);
 
         // 10th functionality
         Console.WriteLine(rentalService.GenerateSystemReport());
